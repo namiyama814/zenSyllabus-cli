@@ -166,4 +166,10 @@ CIは外部APIをモックします。GitHub認証、コード交換、PKCE、�
 
 本ツールはZEN大学の公式提供物ではありません。サイト内部のAPIを利用しているため、提供側の変更に合わせた修正が必要になる場合があります。履修判断には返却された公式ページも確認してください。
 
+## PRレビュー
+
+`main` 向けのPRは、GitHubの[Copilot自動レビュールール](https://github.com/namiyama814/zenSyllabus-cli/rules/25292299)でレビューします。PR作成時と追加push時が対象で、ドラフトPRは対象外です。レビュー方針は `.github/copilot-instructions.md` に記載しています。
+
+CodeRabbitの自動レビューは `.coderabbit.yaml` で無効にしています。Copilotの実行には、PR作成者がCopilotコードレビューを利用できるライセンスと利用枠を持っている必要があります。
+
 MIT License
