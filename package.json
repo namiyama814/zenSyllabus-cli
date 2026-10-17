@@ -1,0 +1,27 @@
+{
+  "name": "zen-syllabus-workspace",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "npm run build -w @zen-syllabus/core && npm run build -w @zen-syllabus/cli",
+    "typecheck": "npm run build && tsc --noEmit -p packages/worker/tsconfig.json",
+    "test": "vitest run --config vitest.config.ts && npm run test -w @zen-syllabus/worker",
+    "test:unit": "vitest run --config vitest.config.ts",
+    "check": "npm run typecheck && npm test && npm run deploy:dry-run",
+    "dev": "npm run build && npm run dev -w @zen-syllabus/worker",
+    "deploy:dry-run": "npm run build && npm run deploy:dry-run -w @zen-syllabus/worker",
+    "deploy": "npm run build && npm run deploy -w @zen-syllabus/worker",
+    "smoke": "npm run build && node scripts/smoke.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/node": "^24.0.0",
+    "vitest": "^4.1.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "zen-syllabus-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-17",
+  "compatibility_flags": ["nodejs_compat"],
+  "kv_namespaces": [
+    {
+      "binding": "OAUTH_KV",
+      "id": "00000000000000000000000000000000",
+    },
+  ],
+  "vars": {
+    "GITHUB_CLIENT_ID": "",
+    "ALLOWED_GITHUB_USER_ID": "",
+    "PUBLIC_ORIGIN": "http://localhost:8787",
+  },
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "invocation_logs": false,
+    },
+  },
+}

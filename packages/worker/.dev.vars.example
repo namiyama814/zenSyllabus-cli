@@ -1,0 +1,4 @@
+GITHUB_CLIENT_ID=your_local_oauth_app_client_id
+GITHUB_CLIENT_SECRET=your_local_oauth_app_client_secret
+ALLOWED_GITHUB_USER_ID=your_numeric_github_user_id
+PUBLIC_ORIGIN=http://localhost:8787

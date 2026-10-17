@@ -1,0 +1,16 @@
+{
+  "name": "@zen-syllabus/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "zen-syllabus": "bin/zen-syllabus.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@zen-syllabus/core": "0.1.0",
+    "commander": "^15.0.0"
+  }
+}
